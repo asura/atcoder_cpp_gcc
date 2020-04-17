@@ -1,6 +1,9 @@
-FROM gcc:5.4
+FROM gcc:9.2
 
-RUN apt update && apt install time
+RUN apt update && \
+  apt -y install \
+  time \
+  libboost-dev
 
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
