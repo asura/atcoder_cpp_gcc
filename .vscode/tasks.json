@@ -2,10 +2,15 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build & exec",
+      "label": "ビルド & 実行",
       "type": "shell",
       "command": "make",
-      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceRoot}",
+      },
+      "problemMatcher": {
+        "base": "$gcc"
+      },
       "group": {
         "kind": "build",
         "isDefault": true
